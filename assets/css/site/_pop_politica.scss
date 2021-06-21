@@ -1,0 +1,79 @@
+@use '../variables' as *;
+@use '../mixins' as *;
+
+/*** POP POLÍTICA PRIVACIDAD ****/
+.popup {
+    @include fixedPos(20px, 50%, 20px, auto);
+    border          : 1px solid $color_claro;
+    border-top-width: 2px;
+    border-radius   : 10px;
+    padding         : 50px 25px 50px;
+    pointer-events  : none;
+    background-color: $color_negro;
+    font-size       : 16px;
+    max-width       : $w_1260;
+    margin          : 0 auto;
+    @include transicion(350ms);
+    @include Ytranslate(0%);
+    opacity: 0;
+    z-index: 11;
+
+    .titulo_general {
+        font-size      : 1.7em;
+        color          : $color_principal;
+        padding-bottom : 9px;
+        padding-left   : 45px;
+        background-size: 27px;
+    }
+
+    .descripcion {
+        margin-top : 25px;
+        font-size  : 1em;
+        line-height: 1.5em;
+        color      : $color_claro;
+        max-height : 700px;
+        text-align : justify;
+
+        p {
+            margin: 12px 0;
+
+            &:first-child {
+                margin-top: 0;
+            }
+        }
+    }
+
+    .cerrar_popup {
+        @include absolutePos(0, -25px, 0, auto);
+        text-align   : center;
+        font-size    : 1.5em;
+        color        : $color_claro;
+        width        : 50px;
+        height       : 50px;
+        line-height  : 46px;
+        margin       : 0 auto;
+        border       : 2px solid $color_claro;
+        border-radius: 100%;
+        background   : $color_negro;
+        cursor       : pointer;
+        @include transicion(200ms);
+        z-index    : 1;
+    }
+}
+
+body.popuped {
+
+    &:after {
+        content: '';
+        @include fixedPos(0, 0, 0, 0);
+        background: rgba(0, 0, 0, .75);
+        z-index: 10;
+    }
+
+    .popup {
+        @include Ytranslate(-50%);
+        pointer-events: all;
+        opacity       : 1;
+    }
+
+}

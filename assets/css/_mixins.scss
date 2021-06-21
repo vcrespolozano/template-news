@@ -1,0 +1,62 @@
+@mixin transicion($duracion) {
+    -webkit-transition: all $duracion linear;
+    -moz-transition   : all $duracion linear;
+    -o-transition     : all $duracion linear;
+    transition        : all $duracion linear;
+}
+
+@mixin Xtranslate($porcentaje) {
+    -webkit-transform: translateX($porcentaje);
+    -moz-transform   : translateX($porcentaje);
+    -ms-transform    : translateX($porcentaje);
+    -o-transform     : translateX($porcentaje);
+    transform        : translateX($porcentaje);
+}
+
+@mixin Ytranslate($porcentaje) {
+    -webkit-transform: translateY($porcentaje);
+    -moz-transform   : translateY($porcentaje);
+    -ms-transform    : translateY($porcentaje);
+    -o-transform     : translateY($porcentaje);
+    transform        : translateY($porcentaje);
+}
+
+@mixin XYtranslate($X, $Y) {
+    -webkit-transform: translate($X, $Y);
+    -moz-transform   : translate($X, $Y);
+    -ms-transform    : translate($X, $Y);
+    -o-transform     : translate($X, $Y);
+    transform        : translate($X, $Y);
+}
+
+@mixin rotar($grados) {
+    -webkit-transform: rotate($grados);
+    -moz-transform   : rotate($grados);
+    -ms-transform    : rotate($grados);
+    -o-transform     : rotate($grados);
+    transform        : rotate($grados);
+}
+
+@mixin scalar($relacion) {
+    -webkit-transform: scale($relacion);
+    -moz-transform   : scale($relacion);
+    -ms-transform    : scale($relacion);
+    -o-transform     : scale($relacion);
+    transform        : scale($relacion);
+}
+
+@mixin absolutePos($left, $top, $right, $bottom) {
+    position: absolute;
+    left    : $left;
+    top     : $top;
+    right   : $right;
+    bottom  : $bottom;
+}
+
+@mixin fixedPos($left, $top, $right, $bottom) {
+    position: fixed;
+    left    : $left;
+    top     : $top;
+    right   : $right;
+    bottom  : $bottom;
+}

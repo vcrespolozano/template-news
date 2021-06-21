@@ -1,0 +1,16 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+@media (hover: hover) {
+
+    nav.menu ul li a:hover {
+        background: $color_oscuro;
+        color: $color_claro;
+    }
+    nav.menu ul li a:hover:after,
+    nav.menu ul li a:hover:before {
+        @include Xtranslate(0);
+        opacity: 1;
+    }
+
+}

@@ -1,0 +1,17 @@
+@use '../variables' as *;
+@use '../mixins' as *;
+
+/**** PIE ****/
+footer {
+    position  : relative;
+    text-align: center;
+    border-top: 1px solid $color_principal;
+    z-index   : 1;
+
+    p {
+        font-size  : 18px;
+        line-height: 50px;
+        color      : $color_claro;
+        padding    : 10px;
+    }
+}
