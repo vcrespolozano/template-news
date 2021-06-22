@@ -4,12 +4,24 @@
 @media (hover: hover) {
 
     nav.menu ul li a:hover {
-        background: $color_oscuro;
-        color: $color_claro;
+        background-color: $color_oscuro;
+        color           : $color_claro;
     }
-    nav.menu ul li a:hover:after,
-    nav.menu ul li a:hover:before {
+    nav.menu ul li a:hover:after {
         @include Xtranslate(0);
+        opacity: 1;
+    }
+    nav.menu .social a:hover {
+        color: $color_principal;
+    }
+    .grid .grid_item:hover .item_content .item_text:before {
+        width: 100%;
+    }
+    .grid .grid_item .item_content .item_text .title:hover {
+        color: $color_principal;
+    }
+    .grid .grid_item .item_content .item_pic:hover:after {
+        @include scalar(1);
         opacity: 1;
     }
 

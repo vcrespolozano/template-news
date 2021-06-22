@@ -1,0 +1,139 @@
+@use '../variables' as *;
+@use '../mixins' as *;
+
+/*** GRID de NOTICIAS ***/
+.grid {
+    position: relative;
+    padding : 30px;
+    z-index : 1;
+
+    .grid_item {
+        display           : block;
+        float             : left;
+        position          : relative;
+        -webkit-box-shadow: 0px 0px 10px 5px rgba(122,122,122, .4);
+        -moz-box-shadow   : 0px 0px 10px 5px rgba(122,122,122, .4);
+        box-shadow        : 0px 0px 10px 5px rgba(122,122,122, .4);
+        margin            : 8px;
+        border-radius     : 12px;
+        z-index           : 1;
+
+        .item_content {
+            position     : relative;
+            border-radius: 12px;
+            overflow     : hidden;
+            z-index      : 1;
+
+            .item_pic {
+                display : block;
+                position: relative;
+                overflow: hidden;
+                z-index : 1;
+    
+                img {
+                    position  : relative;
+                    display   : block;
+                    width     : 100%;
+                    height    : auto;
+                    object-fit: cover;
+                    z-index   : 1;
+                }
+
+                &:after {
+                    content: '';
+                    @include absolutePos(0, 0, 0, 0);
+                    background-color: $principal_muy_transparente;
+                    @include transicion(300ms);
+                    @include scalar(0.9);
+                    opacity: 0;
+                    z-index: 2;
+                }
+            }
+    
+            .item_text {
+                position        : relative;
+                background-color: $color_claro;
+                padding         : 22px 20px;
+                font-size       : 16px;
+                z-index         : 1;
+
+                &:after {
+                    content: '';
+                    @include absolutePos(0, 0, auto, 0);
+                    width     : 5px;
+                    background: $color_principal;
+                    z-index   : 1;
+                }
+
+                &:before {
+                    content: '';
+                    @include absolutePos(auto, 0, 0, 0);
+                    width     : 5px;
+                    background: $gris_claro;
+                    @include transicion(300ms);
+                    z-index   : 1;
+                }
+    
+                .title {
+                    display        : block;
+                    position       : relative;
+                    font-size      : 1.3em;
+                    line-height    : 1.2em;
+                    white-space    : nowrap;
+                    text-overflow  : ellipsis;
+                    overflow       : hidden;
+                    font-weight    : 600;
+                    color          : $color_oscuro;
+                    text-decoration: none;
+                    @include transicion(300ms);
+                    z-index        : 2;
+                }
+    
+                .author {
+                    display   : block;
+                    position  : relative;
+                    font-size : 0.9em;
+                    font-style: italic;
+                    opacity   : 0.7;
+                    z-index   : 2;
+                }
+    
+                .desc {
+                    position   : relative;
+                    font-size  : 1em;
+                    line-height: 1.2em;
+                    max-height : 4.8em;
+                    text-align : justify;
+                    margin-top : 10px;
+                    overflow   : hidden;
+                    z-index    : 2;
+                }
+
+                .date {
+                    @include absolutePos(auto, 0, 0, auto);
+                    background   : $gris_claro;
+                    border-radius: 0 0 0 8px;
+                    padding      : 5px 8px;
+                    font-size    : 0.8em;
+                    z-index      : 2;
+                }
+            }
+        }
+
+        &.one_5 {
+            width : calc(20% - 16px); 
+        }
+
+        &.onehalf_5 {
+            width : calc(30% - 16px); 
+        }
+
+        &.two_5 {
+            width : calc(40% - 16px);
+        }
+
+        &.half_5 {
+            width : calc(50% - 16px);
+        }
+    }
+}

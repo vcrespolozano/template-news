@@ -11,6 +11,9 @@ $(document).ready(function(){
     // Top del menú
     $('nav.menu').css('top', alto_cabecera+'px');
 
+    // Padding TOP del body
+    $('body').css('padding-top', alto_cabecera+'px');
+
     // Fijamos fecha y hora en cabecera
     $('#time').html(time);
     $('#date').html(date);

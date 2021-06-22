@@ -201,6 +201,14 @@ strong {
   }
 }
 
+/***** CONTENT -> CONTENEDOR PRINCIPAL - ANCHO 100% - ANCHO DE MENÚ ****/
+.content {
+  position   : relative;
+  width      : calc(100% - 300px);
+  margin-left: 300px;
+  z-index    : 1;
+}
+
 /**** SCROLLBAR ****/
 ::-webkit-scrollbar {
   width: 5px;

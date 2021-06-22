@@ -13,12 +13,12 @@ nav.menu {
         @include absolutePos(0, 0, auto, 0);
         width     : 5px;
         background: $color_principal;
-        z-index   : 1;
+        z-index   : 2;
     }
 
     ul {
         position: relative;
-        z-index : 2;
+        z-index : 1;
 
         li {
             display: block;
@@ -42,7 +42,7 @@ nav.menu {
                     @include absolutePos(-40px, 0, auto, 0);
                     background-image   : url('../img/ico_planet.png');
                     background-repeat  : no-repeat;
-                    background-position: right 10px center;
+                    background-position: right 12px center;
                     background-size    : 24px;
                     background-color   : $color_principal;
                     width              : 85px;
@@ -55,6 +55,48 @@ nav.menu {
                     z-index: 1;
                 }
             }
+
+            &.lastest {
+                a {
+                    background-color: rgba(0, 0, 0, .6);
+                    color           : $color_claro;
+
+                    &:before {
+                        content: '';
+                        @include absolutePos(auto, 0, -40px, 0);
+                        background-image   : url('../img/ico_alert_w.png');
+                        background-repeat  : no-repeat;
+                        background-position: left 12px center;
+                        background-size    : 24px;
+                        background-color   : $color_principal;
+                        width              : 85px;
+                        height             : 85px;
+                        border-radius      : 100%;
+                        margin             : auto 0;
+                        z-index            : 1;
+                    }
+                }
+            }
+        }
+    }
+
+    .social {
+        @include absolutePos(0, auto, 0, 0);
+        padding         : 10px;
+        background-color: rgba(0, 0, 0, .6);
+        text-align      : center;
+        z-index         : 1;
+
+        a {
+            display       : inline-block;
+            vertical-align: middle;
+            font-size     : 32px;
+            width         : 40px;
+            height        : 40px;
+            line-height   : 40px;
+            margin        : 0 15px;
+            color         : $color_claro;
+            @include transicion(300ms);
         }
     }
 }
