@@ -5,7 +5,7 @@
 .textpic_module {
     position  : relative;
     background: $color_claro;
-    padding   : 40px 30px 30px;
+    padding   : 50px 30px 40px;
     z-index   : 1;
 
     .text {
@@ -71,10 +71,12 @@
     }
 
     .pic {
-        position: relative;
-        float   : left;
-        width   : 40%;
-        z-index : 1;
+        position     : relative;
+        float        : left;
+        width        : 40%;
+        border-radius: 12px;
+        overflow     : hidden;
+        z-index      : 1;
 
         &:before {
             content: '';

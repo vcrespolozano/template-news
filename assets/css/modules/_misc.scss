@@ -30,4 +30,17 @@
             }
         }
     }
+
+    &.reverse {
+        .grid {
+            margin-right: 0;
+            margin-left : 10px;
+            float       : right;
+        }
+        .fullwidth {
+            margin-left : 0;
+            margin-right: 10px;
+            float       : left;
+        }
+    }
 }
