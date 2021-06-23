@@ -11,6 +11,9 @@ $(document).ready(function(){
     // Top del menú
     $('nav.menu').css('top', alto_cabecera+'px');
 
+    // Alto de los MISC
+    altos_mixtos();
+
     // Padding TOP del body
     $('body').css('padding-top', alto_cabecera+'px');
 
@@ -61,6 +64,8 @@ $(window).on('load', function(){
     setTimeout(function(){
         $('.loader').fadeOut('slow');
     }, 900);
+
+    altos_mixtos();
 });
 
 $(window).scroll(function (event) {
@@ -76,12 +81,33 @@ $(window).scroll(function (event) {
 });
 
 $(window).on('orientationchange', function(){
-
+    altos_mixtos();
 });
 
 $(window).on('resize', function(){
-
+    altos_mixtos();
 });
+
+const altos_mixtos = () => {
+
+    // Buscamos los modulos mixtos
+    if( $('.misc').length > 0 )
+    {
+        if( ancho_pantalla > 1023 )
+        {
+            $('.misc').each(function(index){
+                let item      = $('.misc').eq(index);
+                let alto_grid = item.children('.grid').outerHeight(true) - 16;
+
+                item.children('.fullwidth').find('img').css('height', alto_grid+'px');
+            });
+        }
+        else
+        {
+            $('.misc .fullwidth img').css('height', 'auto');
+        }
+    }
+}
 
 const validarContacto = () => {
 

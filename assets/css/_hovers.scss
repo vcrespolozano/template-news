@@ -25,4 +25,22 @@
         opacity: 1;
     }
 
+    .textpic_module .text .title:hover {
+        color: $color_principal;
+    }
+    .textpic_module .pic:hover:after {
+        top: 50%;
+    }
+    .textpic_module .pic:hover:before {
+        bottom: 50%;
+    }
+
+    .fullwidth:hover .fullwidth_content .text {
+        padding-bottom: 60px;
+    }
+
+    footer .footer_links a:hover {
+        color: $color_principal;
+    }
+
 }

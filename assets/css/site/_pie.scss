@@ -3,15 +3,38 @@
 
 /**** PIE ****/
 footer {
-    position  : relative;
-    text-align: center;
-    border-top: 1px solid $color_principal;
-    z-index   : 1;
+    position        : relative;
+    padding         : 10px 30px;
+    width           : calc(100% - 300px);
+    margin-left     : 300px;
+    background-color: rgba(0, 0, 0, .65);
+    z-index         : 1;
 
-    p {
-        font-size  : 18px;
-        line-height: 50px;
+    .footer_links {
+        position: relative;
+        float   : left;
+        z-index : 1;
+
+        a {
+            display        : inline-block;
+            vertical-align : middle;
+            font-size      : 16px;
+            line-height    : 40px;
+            margin         : 0 10px;
+            color          : $color_claro;
+            text-decoration: none;
+            @include transicion(300ms);
+
+            &:first-child {
+                margin-left: 0;
+            }
+        }
+    }
+
+    .cpy {
+        float      : right;
+        font-size  : 16px;
+        line-height: 40px;
         color      : $color_claro;
-        padding    : 10px;
     }
 }

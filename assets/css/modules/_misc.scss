@@ -1,0 +1,33 @@
+@use '../variables' as *;
+@use '../mixins' as *;
+
+/*** FORMATO MIXTO - MEZCLA DE FULLWIDTH Y GRID ***/
+.misc {
+    position: relative;
+    margin  : 15px 30px;
+    width   : calc(100% - 60px);
+    z-index : 1;
+
+    .grid {
+        width       : calc(50% - 10px);
+        padding     : 0;
+        margin-right: 10px;
+        float       : left;
+    }
+
+    .fullwidth {
+        width      : calc(50% - 10px);
+        margin     : 8px 0;
+        margin-left: 10px;
+        float      : right;
+
+        .fullwidth_content {
+            .text {
+                .desc {
+                    max-height: 4.2em;
+                    overflow  : hidden;
+                }
+            }
+        }
+    }
+}
