@@ -45,14 +45,15 @@
             <a class="logo" href="./" title="Plantilla News"></a>
             <div class="info">
                 <div class="breadcrumbs">
-                    <a href="./" title="Inicio">Title</a>
+                    <a href="./" title="Inicio">Inicio</a>
+                    <span>/ New title</span>
                 </div>
                 <div class="right_side">
                     <div class="clock_icon">
                         <span id="time"></span>
                         <span id="date"></span>
                     </div>
-                    <div class="search_icon"></div>
+                    <div class="search_icon" id="search_trigger"></div>
                 </div>
                 <span class="limpia"></span>
             </div>
@@ -80,7 +81,172 @@
     <!-- CONTENIDO -->
     <section class="content">
         <div class="new_details">
-            
+            <div class="new_header">
+                <img src="resources/new_header.jpg" alt="New title">
+                <div class="title">New title</div>
+                <div class="share">
+                    <a href="javascript:void(0);" title="Compartir en Twitter" target="_blank" rel="nofollow"><i class="fab fa-twitter"></i></a>
+                    <a href="javascript:void(0);" title="Compartir en Instagram" target="_blank" rel="nofollow"><i class="fab fa-instagram"></i></a>
+                    <a href="javascript:void(0);" title="Compartir en WhatsApp" target="_blank" rel="nofollow"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+            <div class="new_info">
+                <span class="author">Author</span>
+                <span class="date">24/06/2021</span>
+                <span class="limpia"></span>
+            </div>
+            <div class="new_content">
+                <div class="desc">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus porta interdum tristique. Maecenas sed nisi in erat
+                        gravida sollicitudin vel eu purus. Nam fringilla odio turpis, id feugiat risus laoreet ac. Pellentesque diam mauris,
+                        lobortis et mauris et, malesuada semper odio. Duis in arcu vel ligula vulputate aliquet. Aenean dictum augue vitae
+                        molestie hendrerit. Mauris sit amet hendrerit augue, a bibendum ex. Ut mattis porta leo sit amet aliquet. Vestibulum
+                        pellentesque odio nibh, non dictum ante faucibus ac. <strong>Proin elementum</strong> risus in ex dapibus, id placerat neque luctus.
+                        Interdum et malesuada fames ac ante ipsum primis in faucibus. Interdum et malesuada fames ac ante ipsum primis in
+                        faucibus.
+                    </p>
+                    <p>
+                        Donec blandit consectetur dolor et volutpat. Cras aliquet tincidunt odio vel congue. Morbi nec erat molestie,
+                        lacinia nisi vitae, mattis mauris. Aenean eget ullamcorper nibh, et fermentum quam. Vivamus auctor nibh quis
+                        facilisis tincidunt. Quisque eget arcu quis tellus molestie facilisis ut lacinia turpis. Duis porttitor venenatis
+                        auctor. Pellentesque placerat, dui <strong>congue lobortis finibus</strong>, urna nulla bibendum eros, quis interdum eros felis quis
+                        neque. Vivamus eget purus dignissim justo imperdiet egestas egestas eget eros. Nulla justo felis, imperdiet id
+                        cursus ut, pretium et orci. Nulla facilisi. Nunc ullamcorper ipsum nec tellus egestas, vitae porttitor metus
+                        ullamcorper.
+                    </p>
+                    <p>
+                        Proin semper nibh non luctus fringilla. Etiam interdum magna nec felis pretium, nec congue neque malesuada. Donec
+                        diam sapien, sollicitudin a sapien in, elementum luctus sem. Nam eget dui at neque tincidunt condimentum. Proin
+                        tristique aliquet justo, ut blandit massa fringilla sed. Pellentesque nec tincidunt eros, quis facilisis nibh. Cras
+                        ligula dolor, gravida et tellus a, scelerisque facilisis tortor. Aliquam purus sem, tempus eget nisl ut, dignissim
+                        viverra quam. Vivamus lacinia felis blandit mi accumsan, id hendrerit lorem faucibus. Nunc egestas diam libero, eget
+                        iaculis tellus pretium eu. Pellentesque tincidunt, neque ut eleifend accumsan, est ex rutrum felis, quis accumsan
+                        diam metus at magna. Maecenas tristique mollis erat at aliquet. Fusce vitae pharetra quam, vel varius magna. Donec
+                        consequat consequat massa, a euismod nibh ornare at. Phasellus ut elementum diam.
+                    </p>
+                    <p>
+                        Nunc vehicula, odio in finibus congue, est sapien gravida eros, luctus rutrum risus elit in turpis. Maecenas eu
+                        volutpat arcu, ac tristique tellus. Suspendisse venenatis gravida ex vel lacinia. Orci varius natoque penatibus et
+                        magnis dis parturient montes, nascetur ridiculus mus. Integer euismod tincidunt pharetra. Nulla eu ultricies lectus.
+                        Mauris ac erat id ligula rutrum vulputate eu vel ipsum. Integer sollicitudin lacus eget nisi malesuada eleifend.
+                    </p>
+                    <p>
+                        Maecenas sed rutrum quam, a tempus elit. Pellentesque in ultrices lorem, nec semper est. Sed imperdiet fermentum
+                        est, nec hendrerit quam posuere placerat. Donec volutpat augue a aliquam rhoncus. Quisque id nunc egestas,
+                        vestibulum lorem at, ornare purus. In quis diam et lacus commodo tincidunt ac ac lectus. Sed sed nisl non leo
+                        maximus porta eget id ligula. Donec ante nulla, commodo id lacus id, dictum fringilla nulla. Nulla vel pharetra
+                        mauris. Phasellus sit amet posuere nulla. Pellentesque est dolor, commodo gravida libero eget, elementum posuere
+                        lorem. Duis posuere neque sed hendrerit porta. Curabitur interdum nisl enim, ac hendrerit felis congue non.
+                    </p>
+                </div>
+                <div class="gallery">
+                    <!-- ES IMPORTANTE ANIDAR BIEN EL CIERRE DE UN A CON EL SIGUIENTE, PARA EVITAR EL BUG DE INLINE-BLOCK -->
+                    <a class="item_gallery" data-fancybox="gallery" href="resources/new_gallery_1.jpg" title="Galería 1">
+                        <img src="resources/new_gallery_1_thumb.jpg" alt="Galería 1">
+                    </a
+                    ><a class="item_gallery" data-fancybox="gallery" href="resources/new_gallery_1.jpg" title="Galería 2">
+                        <img src="resources/new_gallery_1_thumb.jpg" alt="Galería 2">
+                    </a
+                    ><a class="item_gallery" data-fancybox="gallery" href="resources/new_gallery_1.jpg" title="Galería 3">
+                        <img src="resources/new_gallery_1_thumb.jpg" alt="Galería 3">
+                    </a
+                    ><a class="item_gallery" data-fancybox="gallery" href="resources/new_gallery_1.jpg" title="Galería 4">
+                        <img src="resources/new_gallery_1_thumb.jpg" alt="Galería 4">
+                    </a
+                    ><a class="item_gallery" data-fancybox="gallery" href="resources/new_gallery_1.jpg" title="Galería 5">
+                        <img src="resources/new_gallery_1_thumb.jpg" alt="Galería 5">
+                    </a
+                    ><a class="item_gallery" data-fancybox="gallery" href="resources/new_gallery_1.jpg" title="Galería 6">
+                        <img src="resources/new_gallery_1_thumb.jpg" alt="Galería 6">
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!--- OTRAS NOTICIAS -->
+        <div class="grid">
+            <div class="grid_item one_5">
+                <div class="item_content">
+                    <div class="item_text">
+                        <a href="new.html" title="Title" class="title">Title</a>
+                        <span class="author">Author</span>
+                        <p class="desc">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed interdum elit vel justo dapibus, quis bibendum quam
+                            ultricies. Sed eleifend laoreet risus. Nam ornare ante non convallis mattis. Nullam dignissim risus vitae risus
+                            posuere semper eleifend nec augue. Sed pretium ipsum cursus placerat eleifend. Orci varius natoque penatibus et
+                            magnis dis parturient montes, nascetur ridiculus mus. Vestibulum ante ipsum primis in faucibus orci luctus et
+                            ultrices posuere cubilia curae; Nunc in hendrerit odio.
+                        </p>
+                        <span class="date">22/06/21 12:49</span>
+                    </div>
+                </div>
+            </div>
+            <div class="grid_item one_5">
+                <div class="item_content">
+                    <div class="item_text">
+                        <a href="new.html" title="Title" class="title">Title 2</a>
+                        <span class="author">Author</span>
+                        <p class="desc">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed interdum elit vel justo dapibus, quis bibendum quam
+                            ultricies. Sed eleifend laoreet risus. Nam ornare ante non convallis mattis. Nullam dignissim risus vitae risus
+                            posuere semper eleifend nec augue. Sed pretium ipsum cursus placerat eleifend. Orci varius natoque penatibus et
+                            magnis dis parturient montes, nascetur ridiculus mus. Vestibulum ante ipsum primis in faucibus orci luctus et
+                            ultrices posuere cubilia curae; Nunc in hendrerit odio.
+                        </p>
+                        <span class="date">22/06/21 12:49</span>
+                    </div>
+                </div>
+            </div>
+            <div class="grid_item one_5">
+                <div class="item_content">
+                    <div class="item_text">
+                        <a href="new.html" title="Title" class="title">Title 2</a>
+                        <span class="author">Author</span>
+                        <p class="desc">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed interdum elit vel justo dapibus, quis bibendum quam
+                            ultricies. Sed eleifend laoreet risus. Nam ornare ante non convallis mattis. Nullam dignissim risus vitae risus
+                            posuere semper eleifend nec augue. Sed pretium ipsum cursus placerat eleifend. Orci varius natoque penatibus et
+                            magnis dis parturient montes, nascetur ridiculus mus. Vestibulum ante ipsum primis in faucibus orci luctus et
+                            ultrices posuere cubilia curae; Nunc in hendrerit odio.
+                        </p>
+                        <span class="date">22/06/21 12:49</span>
+                    </div>
+                </div>
+            </div>
+            <div class="grid_item one_5">
+                <div class="item_content">
+                    <div class="item_text">
+                        <a href="new.html" title="Title" class="title">Title 2</a>
+                        <span class="author">Author</span>
+                        <p class="desc">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed interdum elit vel justo dapibus, quis bibendum quam
+                            ultricies. Sed eleifend laoreet risus. Nam ornare ante non convallis mattis. Nullam dignissim risus vitae risus
+                            posuere semper eleifend nec augue. Sed pretium ipsum cursus placerat eleifend. Orci varius natoque penatibus et
+                            magnis dis parturient montes, nascetur ridiculus mus. Vestibulum ante ipsum primis in faucibus orci luctus et
+                            ultrices posuere cubilia curae; Nunc in hendrerit odio.
+                        </p>
+                        <span class="date">22/06/21 12:49</span>
+                    </div>
+                </div>
+            </div>
+            <div class="grid_item one_5">
+                <div class="item_content">
+                    <div class="item_text">
+                        <a href="new.html" title="Title" class="title">Title 2</a>
+                        <span class="author">Author</span>
+                        <p class="desc">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed interdum elit vel justo dapibus, quis bibendum quam
+                            ultricies. Sed eleifend laoreet risus. Nam ornare ante non convallis mattis. Nullam dignissim risus vitae risus
+                            posuere semper eleifend nec augue. Sed pretium ipsum cursus placerat eleifend. Orci varius natoque penatibus et
+                            magnis dis parturient montes, nascetur ridiculus mus. Vestibulum ante ipsum primis in faucibus orci luctus et
+                            ultrices posuere cubilia curae; Nunc in hendrerit odio.
+                        </p>
+                        <span class="date">22/06/21 12:49</span>
+                    </div>
+                </div>
+            </div>
+            <span class="limpia"></span>
         </div>
     </section>
 
@@ -93,6 +259,19 @@
         <p class="cpy"><span id="year"></span> &copy;<strong>NEWS</strong> Todos los derechos reservados.</p>
         <span class="limpia"></span>
     </footer>
+
+    <div class="btn_top"><i class="fa fa-chevron-up"></i><span class="fill"></span></div>
+
+    <!-- BUSCADOR FIXED -->
+    <div class="search">
+        <span class="close" id="close_search"><i class="fas fa-times"></i></span>
+        <form method="GET" action="./" id="search_form">
+            <div class="field_box">
+                <input type="text" name="search_txt" id="search_txt" placeholder="Buscar...">
+                <span class="submit_search" id="submit_search" title="Buscar"></span> 
+            </div>
+        </form>
+    </div>
 
     <span class="toggle_menu"><i class="fas fa-bars"></i></span>
 

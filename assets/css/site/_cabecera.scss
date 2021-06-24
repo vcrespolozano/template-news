@@ -43,7 +43,7 @@ header {
             float       : right;
             width       : calc(100% - 153px);
             padding-left: 60px;
-            padding-top : 12px;
+            padding-top : 15px;
             z-index     : 1;
     
             .breadcrumbs {
@@ -52,17 +52,18 @@ header {
                 padding-left       : 50px;
                 background         : url('../img/ico_home.png') no-repeat;
                 background-position: left 5px center;
-                background-size    : 32px;
+                background-size    : 28px;
                 z-index            : 1;
     
-                a {
+                a,
+                span {
                     color          : $color_claro;
                     display        : inline-block;
                     vertical-align : middle;
                     margin-right   : 10px;
-                    font-size      : 17px;
-                    line-height    : 40px;
-                    height         : 40px;
+                    font-size      : 16px;
+                    line-height    : 36px;
+                    height         : 36px;
                     text-decoration: none;
     
                     &:last-child {
@@ -77,14 +78,20 @@ header {
                 z-index : 1;
     
                 .search_icon {
+                    position       : relative;
                     display        : inline-block;
                     vertical-align : middle;
-                    margin-left    : 15px;
+                    margin-left    : 10px;
                     background     : url('../img/ico_search.png') center no-repeat;
                     background-size: contain;
-                    width          : 40px;
-                    height         : 40px;
+                    width          : 36px;
+                    height         : 36px;
+                    @include transicion(250ms);
                     cursor         : pointer;
+
+                    &.active {
+                        background-image: url('../img/ico_search_r.png');
+                    }
                 }
     
                 .clock_icon {
@@ -99,9 +106,9 @@ header {
                     span {
                         display    : block;
                         color      : $color_claro;
-                        font-size  : 15px;
-                        line-height: 20px;
-                        height     : 20px;
+                        font-size  : 14px;
+                        line-height: 18px;
+                        height     : 18px;
                     }
                 }
             }

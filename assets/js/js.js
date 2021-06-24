@@ -12,6 +12,9 @@ $(document).ready(function(){
     // Top del menú
     $('nav.menu').css('top', alto_cabecera+'px');
 
+    // Top del buscador
+    $('.search').css('top', alto_cabecera+10+'px');
+
     // Alto de los MISC
     altos_mixtos();
 
@@ -28,6 +31,23 @@ $(document).ready(function(){
     // Submit contacto
     $('#submit').click(function(){
         validarContacto();
+    });
+
+    // Buscar
+    $('#search_trigger').click(function(){
+        $(this).addClass('active');
+        $('.search').addClass('on');
+        $('.search input').trigger('focus');
+    });
+
+    $('#close_search').click(function(){
+        $('#search_trigger').removeClass('active');
+        $('.search input').trigger('blur');
+        $('.search').removeClass('on');
+    });
+
+    $('#submit_search').click(function(){
+        $('#search_form').submit();
     });
 
     // Pop política
@@ -136,7 +156,7 @@ const alto_inner_content = () => {
     if( $('.text_content').length == 1 )
         $('.text_content').css('min-height', min_alto_content+'px');
     else if( $('.new_content').length == 1 )
-        $('.new_content').css('min-height', min_alto_content+'px');
+        $('.new_details').css('min-height', min_alto_content+'px');
 }
 
 const validarContacto = () => {

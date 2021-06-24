@@ -45,14 +45,14 @@
             <a class="logo" href="./" title="Plantilla News"></a>
             <div class="info">
                 <div class="breadcrumbs">
-                    <a href="./" title="Inicio">Title</a>
+                    <a href="./" title="Inicio">Inicio</a>
                 </div>
                 <div class="right_side">
                     <div class="clock_icon">
                         <span id="time"></span>
                         <span id="date"></span>
                     </div>
-                    <div class="search_icon"></div>
+                    <div class="search_icon" id="search_trigger"></div>
                 </div>
                 <span class="limpia"></span>
             </div>
@@ -139,6 +139,17 @@
     </footer>
 
     <div class="btn_top"><i class="fa fa-chevron-up"></i><span class="fill"></span></div>
+
+    <!-- BUSCADOR FIXED -->
+    <div class="search">
+        <span class="close" id="close_search"><i class="fas fa-times"></i></span>
+        <form method="GET" action="./" id="search_form">
+            <div class="field_box">
+                <input type="text" name="search_txt" id="search_txt" placeholder="Buscar...">
+                <span class="submit_search" id="submit_search" title="Buscar"></span> 
+            </div>
+        </form>
+    </div>
 
     <span class="toggle_menu"><i class="fas fa-bars"></i></span>
 

@@ -1,0 +1,186 @@
+@use '../variables' as *;
+@use '../mixins' as *;
+
+/*** NOTICIA ***/
+.new_details {
+    position     : relative;
+    background   : $color_claro;
+    font-size    : 16px;
+    border-bottom: 1px solid $color_principal;
+    z-index      : 1;
+
+    .new_header {
+        position: relative;
+        z-index : 1;
+
+        &:after {
+            content: '';
+            @include absolutePos(0, 0, 0, 0);
+            background: -moz-linear-gradient(0deg, $principal_transparente 0%, $principal_muy_transparente 50%, rgba(255, 28, 37, 0) 100%);
+            background: -webkit-linear-gradient(0deg, $principal_transparente 0%, $principal_muy_transparente 50%, rgba(255, 28, 37, 0) 100%);
+            background: linear-gradient(0deg, $principal_transparente 0%, $principal_muy_transparente 50%, rgba(255, 28, 37, 0) 100%);
+            z-index: 1;
+        }
+
+        .title {
+            @include absolutePos(0, auto, 0, 0);
+            padding    : 20px;
+            color      : $color_claro;
+            font-size  : 26px;
+            line-height: 32px;
+            text-align : center;
+            z-index    : 2;
+        }
+
+        img {
+            position  : relative;
+            display   : block;
+            width     : 100%;
+            height    : 240px;
+            object-fit: cover;
+            z-index   : 1;
+        }
+
+        .share {
+            @include absolutePos(auto, 10px, 10px, auto);
+            padding         : 10px;
+            background-color: rgba(0, 0, 0, .6);
+            text-align      : center;
+            border-radius   : 12px;
+            z-index         : 3;
+    
+            a {
+                display       : inline-block;
+                vertical-align: middle;
+                font-size     : 24px;
+                width         : 32px;
+                height        : 32px;
+                line-height   : 32px;
+                margin        : 0 10px;
+                color         : $gris_claro;
+                @include transicion(300ms);
+            }
+        }
+    }
+
+    .new_info {
+        position        : relative;
+        padding         : 10px 30px;
+        font-size       : 15px;
+        background-color: rgba(24, 24, 24, .5);
+        border-top      : 1px solid $color_principal;
+        z-index         : 1;
+
+        .author {
+            display            : block;
+            float              : left;
+            font-size          : 1em;
+            padding-left       : 40px;
+            color              : $color_claro;
+            background         : url('../img/ico_signature.png') no-repeat;
+            background-position: left 5px center;
+            background-size    : 26px;
+            line-height        : 2em;
+        }
+
+        .date {
+            display            : block;
+            float              : right;
+            font-size          : 1em;
+            padding-left       : 40px;
+            color              : $color_claro;
+            background         : url('../img/ico_calendar.png') no-repeat;
+            background-position: left 5px center;
+            background-size    : 26px;
+            line-height        : 2em;
+        }
+    }
+
+    .new_content {
+        position: relative;
+        padding : 40px 30px;
+        z-index : 1;
+
+        .desc {
+            font-size  : 1em;
+            line-height: 1.5em;
+            text-align : justify;
+    
+            p {
+                margin: 15px 0;
+    
+                &:first-child {
+                    margin-top: 0;
+                }
+    
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+
+        .gallery {
+            position  : relative;
+            margin-top: 50px;
+            z-index   : 1;
+    
+            .item_gallery {
+                position          : relative;
+                display           : inline-block;
+                vertical-align    : middle;
+                width             : calc(25% - 20px);
+                margin            : 10px;
+                -webkit-box-shadow: 0px 0px 10px 5px rgba(122,122,122, .5);
+                -moz-box-shadow   : 0px 0px 10px 5px rgba(122,122,122, .5);
+                box-shadow        : 0px 0px 10px 5px rgba(122,122,122, .5);
+                @include transicion(150ms);
+                z-index           : 1;
+    
+                img {
+                    position  : relative;
+                    display   : block;
+                    width     : 100%;
+                    height    : auto;
+                    object-fit: cover;
+                    z-index   : 1;
+                }
+    
+                &:before {
+                    content: '';
+                    @include absolutePos(15px, 15px, 15px, 15px);
+                    @include transicion(250ms);
+                    @include scalar(1.1);
+                    background-color   : rgba(0, 0, 0, .6);
+                    background-image   : url('../img/pattern_3.png');
+                    background-repeat  : no-repeat;
+                    background-size    : 128px;
+                    background-position: center;;
+                    border             : 1px solid $color_claro;
+                    border-radius      : 5px;
+                    opacity            : 0;
+                    z-index            : 2;
+                }
+            }
+    
+            .owl-nav {
+                .owl-prev {
+                    @include absolutePos(0, 0, auto, 0);
+                    width     : 30px;
+                    color     : $color_claro;
+                    background: rgba(0, 0, 0, .35);
+                    font-size : 18px;
+                    z-index   : 1;
+                }
+    
+                .owl-next {
+                    @include absolutePos(auto, 0, 0, 0);
+                    width     : 30px;
+                    color     : $color_claro;
+                    background: rgba(0, 0, 0, .35);
+                    font-size : 18px;
+                    z-index   : 1;
+                }
+            }
+        }
+    }
+}

@@ -3,6 +3,10 @@
 
 @media (hover: hover) {
 
+    header .header_content .info .right_side .search_icon:hover {
+        background-image: url('../img/ico_search_r.png');
+    }
+
     nav.menu ul li a:hover {
         background-color: $color_oscuro;
         color           : $color_claro;
@@ -46,6 +50,21 @@
     .btn_top:hover {
         border-color: $color_claro;
         color       : $color_claro;
+    }
+
+    .search .close:hover {
+        background-color: $color_claro;
+        color           : $color_principal;
+    }
+    .search .field_box .submit_search:hover {
+        opacity: 1;
+    }
+
+    .new_details .new_header .share a:hover {
+        color: $color_principal;
+    }
+    .new_details .new_content .gallery .item_gallery:hover {
+        @include Ytranslate(-10px);
     }
 
 }

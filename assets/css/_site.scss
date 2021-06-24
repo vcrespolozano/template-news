@@ -1,8 +1,10 @@
 /**** ESTILOS SITIO ****/
 @use 'site/cabecera';
+@use 'site/search';
 @use 'site/menu';
 @use 'site/pie';
 @use 'site/content';
+@use 'site/new';
 
 /**** MODULES ***/
 @use 'modules/grid';
