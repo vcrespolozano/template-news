@@ -144,22 +144,6 @@
                     object-fit: cover;
                     z-index   : 1;
                 }
-    
-                &:before {
-                    content: '';
-                    @include absolutePos(15px, 15px, 15px, 15px);
-                    @include transicion(250ms);
-                    @include scalar(1.1);
-                    background-color   : rgba(0, 0, 0, .6);
-                    background-image   : url('../img/pattern_3.png');
-                    background-repeat  : no-repeat;
-                    background-size    : 128px;
-                    background-position: center;;
-                    border             : 1px solid $color_claro;
-                    border-radius      : 5px;
-                    opacity            : 0;
-                    z-index            : 2;
-                }
             }
     
             .owl-nav {
