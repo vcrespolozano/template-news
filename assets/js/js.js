@@ -10,7 +10,7 @@ var time  = today.getHours() + ":" + today.getMinutes();
 $(document).ready(function(){
 
     // Top del menú
-    $('nav.menu').css('top', alto_cabecera+'px');
+    // $('nav.menu').css('top', alto_cabecera+'px');
 
     // Top del buscador
     $('.search').css('top', alto_cabecera+10+'px');
@@ -137,7 +137,8 @@ const altos_mixtos = () => {
         {
             $('.misc').each(function(index){
                 let item      = $('.misc').eq(index);
-                let alto_grid = item.children('.grid').outerHeight(true) - 16;
+                // Restamos una cantidad fija que se corresponde con el margen superior e inferior de los items del grid, para igualar alturas exactas
+                let alto_grid = item.children('.grid').outerHeight(true) - 30;
 
                 item.children('.fullwidth').find('img').css('height', alto_grid+'px');
             });

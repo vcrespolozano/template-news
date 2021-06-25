@@ -39,7 +39,7 @@ body {
   &:after {
       content: '';
       @include fixedPos(0, 0, 0, 0);
-      background     : url('../img/bg_body.jpg') center no-repeat;
+      background     : url('../img/bg_body_v2.jpg') center no-repeat;
       background-size: cover;
       z-index        : 0;
   }
@@ -179,10 +179,16 @@ strong {
 
 /***** CONTENT -> CONTENEDOR PRINCIPAL - ANCHO 100% - ANCHO DE MENÚ ****/
 .content {
-  position   : relative;
-  width      : calc(100% - 300px);
-  margin-left: 300px;
-  z-index    : 1;
+  position  : relative;
+  width     : $w_1600;
+  background: $color_claro;
+  margin    : 0 auto;
+  padding   : 30px 0;
+  z-index   : 1;
+
+  &.no_pad_top {
+    padding-top: 0;
+  }
 }
 
 /*** BTN TOP ****/
@@ -228,6 +234,23 @@ strong {
   }
 }
 
+/**** BOTÓN TOGGLE MENU ****/
+.toggle_menu {
+  display    : none;
+  @include fixedPos(auto, auto, 4%, 6%);
+  border       : 1px solid $color_claro;
+  width        : 50px;
+  height       : 50px;
+  line-height  : 50px;
+  border-radius: 100%;
+  text-align   : center;
+  font-size    : 22px;
+  background   : $color_principal;
+  color        : $color_claro;
+  opacity      : .8;
+  z-index      : 9;
+}
+
 /**** SCROLLBAR ****/
 ::-webkit-scrollbar {
   width: 5px;
@@ -235,7 +258,7 @@ strong {
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: $color_claro;
+  background: $color_oscuro;
 }
 
 /* Handle */
@@ -245,7 +268,7 @@ strong {
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: $color_oscuro;
+  background: $gris_claro;
 }
 
 /**** DELAY CUSTOM ****/

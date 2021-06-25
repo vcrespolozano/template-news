@@ -4,7 +4,7 @@
 /*** FORMATO MIXTO - MEZCLA DE FULLWIDTH Y GRID ***/
 .misc {
     position: relative;
-    margin  : 15px 30px;
+    margin  : 20px 30px;
     width   : calc(100% - 60px);
     z-index : 1;
 
@@ -17,7 +17,7 @@
 
     .fullwidth {
         width      : calc(50% - 10px);
-        margin     : 8px 0;
+        margin     : 15px 0;
         margin-left: 10px;
         float      : right;
 

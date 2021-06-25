@@ -3,10 +3,12 @@
 
 /*** TEXT-PICTURE MODULE ***/
 .textpic_module {
-    position  : relative;
-    background: $color_claro;
-    padding   : 50px 30px 40px;
-    z-index   : 1;
+    position     : relative;
+    background   : $color_claro;
+    padding      : 50px 30px 30px;
+    margin       : 20px 0;
+    border-top   : 5px solid $gris_claro;
+    z-index      : 1;
 
     .text {
         position    : relative;
