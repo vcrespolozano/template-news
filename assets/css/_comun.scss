@@ -179,12 +179,12 @@ strong {
 
 /***** CONTENT -> CONTENEDOR PRINCIPAL - ANCHO 100% - ANCHO DE MENÚ ****/
 .content {
-  position  : relative;
-  width     : $w_1600;
-  background: $color_claro;
-  margin    : 0 auto;
-  padding   : 30px 0;
-  z-index   : 1;
+  position   : relative;
+  width      : $w_1600;
+  background : $color_claro;
+  margin     : 0 auto;
+  padding-top: 40px;
+  z-index    : 1;
 
   &.no_pad_top {
     padding-top: 0;

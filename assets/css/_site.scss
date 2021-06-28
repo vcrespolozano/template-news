@@ -5,9 +5,11 @@
 @use 'site/pie';
 @use 'site/content';
 @use 'site/new';
+@use 'site/fixederror';
 
 /**** MODULES ***/
 @use 'modules/grid';
 @use 'modules/textpic';
 @use 'modules/fullwidth';
 @use 'modules/misc';
+@use 'modules/newsletter';

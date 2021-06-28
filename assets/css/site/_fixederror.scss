@@ -1,0 +1,99 @@
+@use '../variables' as *;
+@use '../mixins' as *;
+
+/*** POP POLÍTICA PRIVACIDAD ****/
+.fixed_err {
+    @include fixedPos(20px, 50%, 20px, auto);
+    border          : 1px solid $color_claro;
+    border-radius   : 12px;
+    pointer-events  : none;
+    background-color: $color_claro;
+    font-size       : 16px;
+    max-width       : $w_480;
+    margin          : 0 auto;
+    @include transicion(350ms);
+    @include Ytranslate(0%);
+    opacity: 0;
+    z-index: 11;
+
+    .fixed_err_content {
+        position      : relative;
+        border-radius : 12px;
+        padding-bottom: 15px;
+        text-align    : center;
+        overflow      : hidden;
+        z-index       : 1;
+
+        .title {
+            font-size : 1.2em;
+            background: $color_principal;
+            color     : $color_claro;
+            padding   : 10px;
+        }
+    
+        .txt {
+            padding    : 15px 20px;
+            font-size  : 1em;
+            line-height: 1.5em;
+            color      : $color_oscuro;
+            text-align : center;
+    
+            p {
+                margin: 12px 0;
+    
+                &:first-child {
+                    margin-top: 0;
+                }
+            }
+        }
+
+        .btn {
+            display      : block;
+            max-width    : 160px;
+            margin       : 0 auto;
+            border       : 1px solid $color_principal;
+            border-radius: 12px;
+            font-size    : 1em;
+            line-height  : 1em;
+            padding      : 10px;
+            background   : $color_principal;
+            color        : $color_claro;
+            cursor       : pointer;
+            @include transicion(300ms);
+        }
+    }
+
+    .close {
+        @include absolutePos(0, -55px, 0, auto);
+        text-align   : center;
+        font-size    : 1.3em;
+        color        : $color_claro;
+        width        : 40px;
+        height       : 40px;
+        line-height  : 36px;
+        margin       : 0 auto;
+        border       : 2px solid $color_claro;
+        border-radius: 100%;
+        background   : transparent;
+        cursor       : pointer;
+        @include transicion(300ms);
+        z-index    : 2;
+    }
+}
+
+body.errored {
+
+    &:after {
+        content: '';
+        @include fixedPos(0, 0, 0, 0);
+        background: rgba(0, 0, 0, .75);
+        z-index: 10;
+    }
+
+    .fixed_err {
+        @include Ytranslate(-50%);
+        pointer-events: all;
+        opacity       : 1;
+    }
+
+}

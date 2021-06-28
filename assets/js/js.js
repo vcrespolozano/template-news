@@ -63,6 +63,29 @@ $(document).ready(function(){
         $('body').removeClass('popuped');
     });
 
+    // Pop error
+    $('.fixed_err .close').click(function(){
+        $('body').removeClass('errored');
+        $('.fixed_err .txt').html('');
+    });
+
+    $('#ok_err').click(function(){
+        $('body').removeClass('errored');
+        $('.fixed_err .txt').html('');
+    });
+
+    // Newsletter
+    $('#submit_newsletter').click(function(){
+        // Validaciones aquí
+        let email = $('input[name="nl_email"]').val();
+        let email_valid = validEmail(email);
+
+        if( !email_valid.valid )
+            fixedError('Newsletter', email_valid.msg);
+        else
+            $('#newsletter_form').submit();
+    });
+
     // PARA MÓVIL
     if( ancho_pantalla < 768 )
     {
@@ -158,6 +181,20 @@ const alto_inner_content = () => {
         $('.text_content').css('min-height', min_alto_content+'px');
     else if( $('.new_content').length == 1 )
         $('.new_details').css('min-height', min_alto_content+'px');
+}
+
+const fixedError = (title, txt) => {
+
+    if( title == '' )
+        title = 'Error';
+     
+    if( txt == '' )
+        txt = 'Error';
+
+    $('.fixed_err .title').html(title);
+    $('.fixed_err .txt').html(txt);
+
+    $('body').addClass('errored');
 }
 
 const validarContacto = () => {
