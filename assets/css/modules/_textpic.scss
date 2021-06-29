@@ -82,7 +82,8 @@
 
         &:before {
             content: '';
-            @include absolutePos(0, 0, 0, 100%);
+            @include absolutePos(0, 0, 0, auto);
+            height          : 0;
             background-color: $principal_muy_transparente;
             @include transicion(300ms);
             z-index: 2;
@@ -90,7 +91,8 @@
 
         &:after {
             content: '';
-            @include absolutePos(0, 100%, 0, 0);
+            @include absolutePos(0, auto, 0, 0);
+            height          : 0;
             background-color: $principal_muy_transparente;
             @include transicion(300ms);
             z-index: 2;

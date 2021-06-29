@@ -26,10 +26,13 @@
         color: $color_principal;
     }
     .textpic_module .pic:hover:after {
-        top: 50%;
+        height: calc(50% + 1px);
+    }
+    .textpic_module.reverse .pic:hover:after {
+        height: 50%;
     }
     .textpic_module .pic:hover:before {
-        bottom: 50%;
+        height: 50%;
     }
 
     .fullwidth:hover .fullwidth_content .text {
@@ -70,6 +73,13 @@
     }
     .fixed_err .fixed_err_content .btn:hover {
         background-color: $color_oscuro;
+    }
+
+    footer .left_foot .social a:hover {
+        color: $color_claro;
+    }
+    footer .left_foot .social a:hover:after {
+        @include scalar(0);
     }
 
 }
