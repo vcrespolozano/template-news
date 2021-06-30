@@ -26,7 +26,7 @@
         color: $color_principal;
     }
     .textpic_module .pic:hover:after {
-        height: calc(50% + 1px);
+        height: 50%;
     }
     .textpic_module.reverse .pic:hover:after {
         height: 50%;
