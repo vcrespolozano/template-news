@@ -61,6 +61,21 @@
                 @include transicion(300ms);
             }
         }
+
+        .back {
+            @include absolutePos(10px, 10px, auto, auto);
+            background-color: rgba(0, 0, 0, .6);
+            color           : $color_claro;
+            text-align      : center;
+            border-radius   : 12px;
+            cursor          : pointer;
+            width           : 42px;
+            height          : 42px;
+            line-height     : 42px;
+            font-size       : 24px;
+            @include transicion(300ms);
+            z-index         : 3;
+        }
     }
 
     .new_info {

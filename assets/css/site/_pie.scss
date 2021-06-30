@@ -11,23 +11,25 @@ footer {
     .left_foot {
         position: relative;
         float   : left;
-        width   : 240px;
-        padding : 10px 30px;
+        width   : 225px;
+        padding : 10px 30px 10px 15px;
         z-index : 1;
 
         &:after {
             content: '';
             @include absolutePos(-20px, -80px, auto, 0);
-            width     : 230px;
-            height    : 230px;
+            width     : 225px;
+            height    : 225px;
             background: $color_principal;
-            @include rotar(60deg);
+            @include rotar(70deg);
             z-index   : 1;
         }
 
         .social {
             position  : relative;
+            width     : 100%;
             text-align: center;
+            margin    : 0 auto;
             z-index   : 2;
 
             a {
@@ -37,9 +39,9 @@ footer {
                 width         : 40px;
                 height        : 40px;
                 line-height   : 40px;
-                font-size     : 24px;
+                font-size     : 22px;
                 color         : $color_principal;
-                margin        : 0 5px;
+                margin        : 0 10px;
                 text-align    : center;
                 @include transicion(200ms);
                 z-index       : 1;
@@ -65,7 +67,7 @@ footer {
     .right_foot {
         position        : relative;
         float           : right;
-        width           : calc(100% - 240px);
+        width           : calc(100% - 225px);
         padding         : 10px 30px 10px 15px;
         z-index         : 1;
 

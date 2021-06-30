@@ -1,6 +1,6 @@
 /**** ESTILOS SITIO ****/
 // @use 'site/cabecera';
-@use 'site/cabeceraV2';
+@use 'site/cabecera';
 @use 'site/search';
 @use 'site/pie';
 @use 'site/content';
@@ -13,3 +13,4 @@
 @use 'modules/fullwidth';
 @use 'modules/misc';
 @use 'modules/newsletter';
+@use 'modules/paginator';

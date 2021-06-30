@@ -1,0 +1,545 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Plantilla noticias</title>
+    <meta name="title" content="Plantilla noticias" />
+    <meta name="description" content="Plantilla noticias" />
+
+    <meta property="og:title" content="Plantilla noticias" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://vcrespolozano.github.io/template-news" />
+    <meta property="og:image" content="RUTA DE LA IMAGEN" />
+    <meta property="og:description" content="Plantilla noticias" />
+    <meta name="twitter:card" content="summary" />
+
+    <link rel="canonical" href="https://vcrespolozano.github.io/template-news" />
+    <link rel="home" href="https://vcrespolozano.github.io/template-news" />
+
+    <!--
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+        <link rel="manifest" href="/site.webmanifest">
+        <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#242424">
+        <meta name="msapplication-TileColor" content="#242424">
+        <meta name="theme-color" content="#ffffff">
+        -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- PLUGIN OWL CAROUSEL -->
+    <link rel="stylesheet" href="assets/js/owl-carousel/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/js/owl-carousel/assets/owl.theme.default.min.css">
+    <!-- PLUGIN FANCYBOX -->
+    <link rel="stylesheet" href="assets/js/fancybox/jquery.fancybox.min.css" />
+    <!-- CSS PROPIO DEL SITIO -->
+    <link rel="stylesheet" href="assets/css/css.min.css?v1.0">
+</head>
+
+<body>
+
+    <header>
+        <div class="header_content">
+            <a class="logo" href="./" title="Plantilla News"></a>
+            <div class="info">
+                <div class="upper">
+                    <div class="breadcrumbs">
+                        <a href="./" title="Inicio">Inicio</a>
+                         . 
+                        <span>Category</span>
+                    </div>
+                    <div class="right_side">
+                        <div class="clock_icon">
+                            <span id="time"></span>
+                            <span id="date"></span>
+                        </div>
+                        <div class="search_icon" id="search_trigger"></div>
+                    </div>
+                    <span class="limpia"></span>
+                </div>
+                <nav class="menu">
+                    <ul>
+                        <li><a href="./category.html" data-cat="inicio" title="Última hora">Última hora</a></li
+                        ><li><a href="./category.html" data-cat="nacional" title="Nacional">Nacional</a></li
+                        ><li><a href="./category.html" data-cat="internacional" title="Internacional">Internacional</a></li
+                        ><li><a href="./category.html" data-cat="economia" title="Economía">Economía</a></li
+                        ><li><a href="./category.html" data-cat="musica" title="Música">Música</a></li
+                        ><li><a href="./category.html" data-cat="cine" title="Cine">Cine</a></li
+                        ><li><a href="./category.html" data-cat="deportes" title="Deportes">Deportes</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <span class="limpia"></span>
+        </div>
+    </header>
+
+    <!-- CONTENIDO -->
+    <section class="content">
+        <div class="search_content">
+            <!-- TITULO CON VOLVER -->
+            <div class="titulo_back">
+                <span id="back" title="Volver" class="back"><i class="fas fa-arrow-left"></i></span>
+                <div class="txt">Resultados de la búsqueda <span class="quoted" id="searched_txt"></span></div>
+            </div>
+    
+            <!--- MODULO DE 5 -->
+            <div class="grid">
+                <div class="grid_item one_5">
+                    <div class="item_content">
+                        <a href="new.html" title="Title" class="item_pic">
+                            <img src="resources/new_1_grid.jpg" alt="New 1">
+                        </a>
+                        <div class="item_text">
+                            <a href="new.html" title="Title" class="title">Title</a>
+                            <span class="author">Author</span>
+                            <p class="desc">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed interdum elit vel justo dapibus, quis bibendum quam
+                                ultricies. Sed eleifend laoreet risus. Nam ornare ante non convallis mattis. Nullam dignissim risus vitae risus
+                                posuere semper eleifend nec augue. Sed pretium ipsum cursus placerat eleifend. Orci varius natoque penatibus et
+                                magnis dis parturient montes, nascetur ridiculus mus. Vestibulum ante ipsum primis in faucibus orci luctus et
+                                ultrices posuere cubilia curae; Nunc in hendrerit odio.
+                            </p>
+                            <span class="date">22/06/21 12:49</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid_item one_5">
+                    <div class="item_content">
+                        <a href="new.html" title="Title" class="item_pic">
+                            <img src="resources/new_1_grid.jpg" alt="New 2">
+                        </a>
+                        <div class="item_text">
+                            <a href="new.html" title="Title" class="title">Title 2</a>
+                            <span class="author">Author</span>
+                            <p class="desc">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed interdum elit vel justo dapibus, quis bibendum quam
+                                ultricies. Sed eleifend laoreet risus. Nam ornare ante non convallis mattis. Nullam dignissim risus vitae risus
+                                posuere semper eleifend nec augue. Sed pretium ipsum cursus placerat eleifend. Orci varius natoque penatibus et
+                                magnis dis parturient montes, nascetur ridiculus mus. Vestibulum ante ipsum primis in faucibus orci luctus et
+                                ultrices posuere cubilia curae; Nunc in hendrerit odio.
+                            </p>
+                            <span class="date">22/06/21 12:49</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid_item one_5">
+                    <div class="item_content">
+                        <a href="new.html" title="Title" class="item_pic">
+                            <img src="resources/new_1_grid.jpg" alt="New 2">
+                        </a>
+                        <div class="item_text">
+                            <a href="new.html" title="Title" class="title">Title 2</a>
+                            <span class="author">Author</span>
+                            <p class="desc">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed interdum elit vel justo dapibus, quis bibendum quam
+                                ultricies. Sed eleifend laoreet risus. Nam ornare ante non convallis mattis. Nullam dignissim risus vitae risus
+                                posuere semper eleifend nec augue. Sed pretium ipsum cursus placerat eleifend. Orci varius natoque penatibus et
+                                magnis dis parturient montes, nascetur ridiculus mus. Vestibulum ante ipsum primis in faucibus orci luctus et
+                                ultrices posuere cubilia curae; Nunc in hendrerit odio.
+                            </p>
+                            <span class="date">22/06/21 12:49</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid_item one_5">
+                    <div class="item_content">
+                        <a href="new.html" title="Title" class="item_pic">
+                            <img src="resources/new_1_grid.jpg" alt="New 2">
+                        </a>
+                        <div class="item_text">
+                            <a href="new.html" title="Title" class="title">Title 2</a>
+                            <span class="author">Author</span>
+                            <p class="desc">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed interdum elit vel justo dapibus, quis bibendum quam
+                                ultricies. Sed eleifend laoreet risus. Nam ornare ante non convallis mattis. Nullam dignissim risus vitae risus
+                                posuere semper eleifend nec augue. Sed pretium ipsum cursus placerat eleifend. Orci varius natoque penatibus et
+                                magnis dis parturient montes, nascetur ridiculus mus. Vestibulum ante ipsum primis in faucibus orci luctus et
+                                ultrices posuere cubilia curae; Nunc in hendrerit odio.
+                            </p>
+                            <span class="date">22/06/21 12:49</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid_item one_5">
+                    <div class="item_content">
+                        <a href="new.html" title="Title" class="item_pic">
+                            <img src="resources/new_1_grid.jpg" alt="New 2">
+                        </a>
+                        <div class="item_text">
+                            <a href="new.html" title="Title" class="title">Title 2</a>
+                            <span class="author">Author</span>
+                            <p class="desc">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed interdum elit vel justo dapibus, quis bibendum quam
+                                ultricies. Sed eleifend laoreet risus. Nam ornare ante non convallis mattis. Nullam dignissim risus vitae risus
+                                posuere semper eleifend nec augue. Sed pretium ipsum cursus placerat eleifend. Orci varius natoque penatibus et
+                                magnis dis parturient montes, nascetur ridiculus mus. Vestibulum ante ipsum primis in faucibus orci luctus et
+                                ultrices posuere cubilia curae; Nunc in hendrerit odio.
+                            </p>
+                            <span class="date">22/06/21 12:49</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid_item one_5">
+                    <div class="item_content">
+                        <a href="new.html" title="Title" class="item_pic">
+                            <img src="resources/new_1_grid.jpg" alt="New 2">
+                        </a>
+                        <div class="item_text">
+                            <a href="new.html" title="Title" class="title">Title 2</a>
+                            <span class="author">Author</span>
+                            <p class="desc">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed interdum elit vel justo dapibus, quis bibendum quam
+                                ultricies. Sed eleifend laoreet risus. Nam ornare ante non convallis mattis. Nullam dignissim risus vitae risus
+                                posuere semper eleifend nec augue. Sed pretium ipsum cursus placerat eleifend. Orci varius natoque penatibus et
+                                magnis dis parturient montes, nascetur ridiculus mus. Vestibulum ante ipsum primis in faucibus orci luctus et
+                                ultrices posuere cubilia curae; Nunc in hendrerit odio.
+                            </p>
+                            <span class="date">22/06/21 12:49</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid_item one_5">
+                    <div class="item_content">
+                        <a href="new.html" title="Title" class="item_pic">
+                            <img src="resources/new_1_grid.jpg" alt="New 2">
+                        </a>
+                        <div class="item_text">
+                            <a href="new.html" title="Title" class="title">Title 2</a>
+                            <span class="author">Author</span>
+                            <p class="desc">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed interdum elit vel justo dapibus, quis bibendum quam
+                                ultricies. Sed eleifend laoreet risus. Nam ornare ante non convallis mattis. Nullam dignissim risus vitae risus
+                                posuere semper eleifend nec augue. Sed pretium ipsum cursus placerat eleifend. Orci varius natoque penatibus et
+                                magnis dis parturient montes, nascetur ridiculus mus. Vestibulum ante ipsum primis in faucibus orci luctus et
+                                ultrices posuere cubilia curae; Nunc in hendrerit odio.
+                            </p>
+                            <span class="date">22/06/21 12:49</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid_item one_5">
+                    <div class="item_content">
+                        <a href="new.html" title="Title" class="item_pic">
+                            <img src="resources/new_1_grid.jpg" alt="New 2">
+                        </a>
+                        <div class="item_text">
+                            <a href="new.html" title="Title" class="title">Title 2</a>
+                            <span class="author">Author</span>
+                            <p class="desc">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed interdum elit vel justo dapibus, quis bibendum quam
+                                ultricies. Sed eleifend laoreet risus. Nam ornare ante non convallis mattis. Nullam dignissim risus vitae risus
+                                posuere semper eleifend nec augue. Sed pretium ipsum cursus placerat eleifend. Orci varius natoque penatibus et
+                                magnis dis parturient montes, nascetur ridiculus mus. Vestibulum ante ipsum primis in faucibus orci luctus et
+                                ultrices posuere cubilia curae; Nunc in hendrerit odio.
+                            </p>
+                            <span class="date">22/06/21 12:49</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid_item one_5">
+                    <div class="item_content">
+                        <a href="new.html" title="Title" class="item_pic">
+                            <img src="resources/new_1_grid.jpg" alt="New 2">
+                        </a>
+                        <div class="item_text">
+                            <a href="new.html" title="Title" class="title">Title 2</a>
+                            <span class="author">Author</span>
+                            <p class="desc">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed interdum elit vel justo dapibus, quis bibendum quam
+                                ultricies. Sed eleifend laoreet risus. Nam ornare ante non convallis mattis. Nullam dignissim risus vitae risus
+                                posuere semper eleifend nec augue. Sed pretium ipsum cursus placerat eleifend. Orci varius natoque penatibus et
+                                magnis dis parturient montes, nascetur ridiculus mus. Vestibulum ante ipsum primis in faucibus orci luctus et
+                                ultrices posuere cubilia curae; Nunc in hendrerit odio.
+                            </p>
+                            <span class="date">22/06/21 12:49</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid_item one_5">
+                    <div class="item_content">
+                        <a href="new.html" title="Title" class="item_pic">
+                            <img src="resources/new_1_grid.jpg" alt="New 2">
+                        </a>
+                        <div class="item_text">
+                            <a href="new.html" title="Title" class="title">Title 2</a>
+                            <span class="author">Author</span>
+                            <p class="desc">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed interdum elit vel justo dapibus, quis bibendum quam
+                                ultricies. Sed eleifend laoreet risus. Nam ornare ante non convallis mattis. Nullam dignissim risus vitae risus
+                                posuere semper eleifend nec augue. Sed pretium ipsum cursus placerat eleifend. Orci varius natoque penatibus et
+                                magnis dis parturient montes, nascetur ridiculus mus. Vestibulum ante ipsum primis in faucibus orci luctus et
+                                ultrices posuere cubilia curae; Nunc in hendrerit odio.
+                            </p>
+                            <span class="date">22/06/21 12:49</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid_item one_5">
+                    <div class="item_content">
+                        <a href="new.html" title="Title" class="item_pic">
+                            <img src="resources/new_1_grid.jpg" alt="New 2">
+                        </a>
+                        <div class="item_text">
+                            <a href="new.html" title="Title" class="title">Title 2</a>
+                            <span class="author">Author</span>
+                            <p class="desc">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed interdum elit vel justo dapibus, quis bibendum quam
+                                ultricies. Sed eleifend laoreet risus. Nam ornare ante non convallis mattis. Nullam dignissim risus vitae risus
+                                posuere semper eleifend nec augue. Sed pretium ipsum cursus placerat eleifend. Orci varius natoque penatibus et
+                                magnis dis parturient montes, nascetur ridiculus mus. Vestibulum ante ipsum primis in faucibus orci luctus et
+                                ultrices posuere cubilia curae; Nunc in hendrerit odio.
+                            </p>
+                            <span class="date">22/06/21 12:49</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid_item one_5">
+                    <div class="item_content">
+                        <a href="new.html" title="Title" class="item_pic">
+                            <img src="resources/new_1_grid.jpg" alt="New 2">
+                        </a>
+                        <div class="item_text">
+                            <a href="new.html" title="Title" class="title">Title 2</a>
+                            <span class="author">Author</span>
+                            <p class="desc">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed interdum elit vel justo dapibus, quis bibendum quam
+                                ultricies. Sed eleifend laoreet risus. Nam ornare ante non convallis mattis. Nullam dignissim risus vitae risus
+                                posuere semper eleifend nec augue. Sed pretium ipsum cursus placerat eleifend. Orci varius natoque penatibus et
+                                magnis dis parturient montes, nascetur ridiculus mus. Vestibulum ante ipsum primis in faucibus orci luctus et
+                                ultrices posuere cubilia curae; Nunc in hendrerit odio.
+                            </p>
+                            <span class="date">22/06/21 12:49</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid_item one_5">
+                    <div class="item_content">
+                        <a href="new.html" title="Title" class="item_pic">
+                            <img src="resources/new_1_grid.jpg" alt="New 2">
+                        </a>
+                        <div class="item_text">
+                            <a href="new.html" title="Title" class="title">Title 2</a>
+                            <span class="author">Author</span>
+                            <p class="desc">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed interdum elit vel justo dapibus, quis bibendum quam
+                                ultricies. Sed eleifend laoreet risus. Nam ornare ante non convallis mattis. Nullam dignissim risus vitae risus
+                                posuere semper eleifend nec augue. Sed pretium ipsum cursus placerat eleifend. Orci varius natoque penatibus et
+                                magnis dis parturient montes, nascetur ridiculus mus. Vestibulum ante ipsum primis in faucibus orci luctus et
+                                ultrices posuere cubilia curae; Nunc in hendrerit odio.
+                            </p>
+                            <span class="date">22/06/21 12:49</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid_item one_5">
+                    <div class="item_content">
+                        <a href="new.html" title="Title" class="item_pic">
+                            <img src="resources/new_1_grid.jpg" alt="New 2">
+                        </a>
+                        <div class="item_text">
+                            <a href="new.html" title="Title" class="title">Title 2</a>
+                            <span class="author">Author</span>
+                            <p class="desc">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed interdum elit vel justo dapibus, quis bibendum quam
+                                ultricies. Sed eleifend laoreet risus. Nam ornare ante non convallis mattis. Nullam dignissim risus vitae risus
+                                posuere semper eleifend nec augue. Sed pretium ipsum cursus placerat eleifend. Orci varius natoque penatibus et
+                                magnis dis parturient montes, nascetur ridiculus mus. Vestibulum ante ipsum primis in faucibus orci luctus et
+                                ultrices posuere cubilia curae; Nunc in hendrerit odio.
+                            </p>
+                            <span class="date">22/06/21 12:49</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid_item one_5">
+                    <div class="item_content">
+                        <a href="new.html" title="Title" class="item_pic">
+                            <img src="resources/new_1_grid.jpg" alt="New 2">
+                        </a>
+                        <div class="item_text">
+                            <a href="new.html" title="Title" class="title">Title 2</a>
+                            <span class="author">Author</span>
+                            <p class="desc">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed interdum elit vel justo dapibus, quis bibendum quam
+                                ultricies. Sed eleifend laoreet risus. Nam ornare ante non convallis mattis. Nullam dignissim risus vitae risus
+                                posuere semper eleifend nec augue. Sed pretium ipsum cursus placerat eleifend. Orci varius natoque penatibus et
+                                magnis dis parturient montes, nascetur ridiculus mus. Vestibulum ante ipsum primis in faucibus orci luctus et
+                                ultrices posuere cubilia curae; Nunc in hendrerit odio.
+                            </p>
+                            <span class="date">22/06/21 12:49</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid_item one_5">
+                    <div class="item_content">
+                        <a href="new.html" title="Title" class="item_pic">
+                            <img src="resources/new_1_grid.jpg" alt="New 2">
+                        </a>
+                        <div class="item_text">
+                            <a href="new.html" title="Title" class="title">Title 2</a>
+                            <span class="author">Author</span>
+                            <p class="desc">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed interdum elit vel justo dapibus, quis bibendum quam
+                                ultricies. Sed eleifend laoreet risus. Nam ornare ante non convallis mattis. Nullam dignissim risus vitae risus
+                                posuere semper eleifend nec augue. Sed pretium ipsum cursus placerat eleifend. Orci varius natoque penatibus et
+                                magnis dis parturient montes, nascetur ridiculus mus. Vestibulum ante ipsum primis in faucibus orci luctus et
+                                ultrices posuere cubilia curae; Nunc in hendrerit odio.
+                            </p>
+                            <span class="date">22/06/21 12:49</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid_item one_5">
+                    <div class="item_content">
+                        <a href="new.html" title="Title" class="item_pic">
+                            <img src="resources/new_1_grid.jpg" alt="New 2">
+                        </a>
+                        <div class="item_text">
+                            <a href="new.html" title="Title" class="title">Title 2</a>
+                            <span class="author">Author</span>
+                            <p class="desc">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed interdum elit vel justo dapibus, quis bibendum quam
+                                ultricies. Sed eleifend laoreet risus. Nam ornare ante non convallis mattis. Nullam dignissim risus vitae risus
+                                posuere semper eleifend nec augue. Sed pretium ipsum cursus placerat eleifend. Orci varius natoque penatibus et
+                                magnis dis parturient montes, nascetur ridiculus mus. Vestibulum ante ipsum primis in faucibus orci luctus et
+                                ultrices posuere cubilia curae; Nunc in hendrerit odio.
+                            </p>
+                            <span class="date">22/06/21 12:49</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid_item one_5">
+                    <div class="item_content">
+                        <a href="new.html" title="Title" class="item_pic">
+                            <img src="resources/new_1_grid.jpg" alt="New 2">
+                        </a>
+                        <div class="item_text">
+                            <a href="new.html" title="Title" class="title">Title 2</a>
+                            <span class="author">Author</span>
+                            <p class="desc">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed interdum elit vel justo dapibus, quis bibendum quam
+                                ultricies. Sed eleifend laoreet risus. Nam ornare ante non convallis mattis. Nullam dignissim risus vitae risus
+                                posuere semper eleifend nec augue. Sed pretium ipsum cursus placerat eleifend. Orci varius natoque penatibus et
+                                magnis dis parturient montes, nascetur ridiculus mus. Vestibulum ante ipsum primis in faucibus orci luctus et
+                                ultrices posuere cubilia curae; Nunc in hendrerit odio.
+                            </p>
+                            <span class="date">22/06/21 12:49</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid_item one_5">
+                    <div class="item_content">
+                        <a href="new.html" title="Title" class="item_pic">
+                            <img src="resources/new_1_grid.jpg" alt="New 2">
+                        </a>
+                        <div class="item_text">
+                            <a href="new.html" title="Title" class="title">Title 2</a>
+                            <span class="author">Author</span>
+                            <p class="desc">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed interdum elit vel justo dapibus, quis bibendum quam
+                                ultricies. Sed eleifend laoreet risus. Nam ornare ante non convallis mattis. Nullam dignissim risus vitae risus
+                                posuere semper eleifend nec augue. Sed pretium ipsum cursus placerat eleifend. Orci varius natoque penatibus et
+                                magnis dis parturient montes, nascetur ridiculus mus. Vestibulum ante ipsum primis in faucibus orci luctus et
+                                ultrices posuere cubilia curae; Nunc in hendrerit odio.
+                            </p>
+                            <span class="date">22/06/21 12:49</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid_item one_5">
+                    <div class="item_content">
+                        <a href="new.html" title="Title" class="item_pic">
+                            <img src="resources/new_1_grid.jpg" alt="New 2">
+                        </a>
+                        <div class="item_text">
+                            <a href="new.html" title="Title" class="title">Title 2</a>
+                            <span class="author">Author</span>
+                            <p class="desc">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed interdum elit vel justo dapibus, quis bibendum quam
+                                ultricies. Sed eleifend laoreet risus. Nam ornare ante non convallis mattis. Nullam dignissim risus vitae risus
+                                posuere semper eleifend nec augue. Sed pretium ipsum cursus placerat eleifend. Orci varius natoque penatibus et
+                                magnis dis parturient montes, nascetur ridiculus mus. Vestibulum ante ipsum primis in faucibus orci luctus et
+                                ultrices posuere cubilia curae; Nunc in hendrerit odio.
+                            </p>
+                            <span class="date">22/06/21 12:49</span>
+                        </div>
+                    </div>
+                </div>
+                <span class="limpia"></span>
+            </div>
+
+            <!-- PAGINATOR -->
+            <div class="paginator">
+                <a href="javascript:void(0);" class="btn_page" title="Primera página"><i class="fas fa-angle-double-left"></i></a>
+                <a href="javascript:void(0);" class="btn_page" title="Página anterior"><i class="fas fa-chevron-left"></i></a>
+                <span class="pag_info">1 / 3</span>
+                <a href="javascript:void(0);" class="btn_page" title="Siguiente página"><i class="fas fa-chevron-right"></i></a>
+                <a href="javascript:void(0);" class="btn_page" title="Última página"><i class="fas fa-angle-double-right"></i></a>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- PIE -->
+    <footer>
+        <div class="left_foot">
+            <div class="social">
+                <a href="javascript:void(0);" title="Twitter" target="_blank" rel="nofollow"><i class="fab fa-twitter"></i></a
+                ><a href="javascript:void(0);" title="Instagram" target="_blank" rel="nofollow"><i class="fab fa-instagram"></i></a
+                ><a href="javascript:void(0);" title="Facebook" target="_blank" rel="nofollow"><i class="fab fa-facebook"></i></a>
+            </div>
+        </div>
+        <div class="right_foot">
+            <div class="footer_links">
+                <a href="./content.html" title="Privacidad">Privacidad</a>
+                <a href="./content.html" title="Internacional">Cookies</a>
+            </div>
+            <p class="cpy"><span id="year"></span> &copy;<strong>NEWS</strong> Todos los derechos reservados.</p>
+            <span class="limpia"></span>
+        </div>
+        <span class="limpia"></span>
+    </footer>
+
+    <div class="btn_top"><i class="fa fa-chevron-up"></i><span class="fill"></span></div>
+
+    <!-- BUSCADOR FIXED -->
+    <div class="search">
+        <span class="close" id="close_search"><i class="fas fa-times"></i></span>
+        <form method="GET" action="./search.html" id="search_form">
+            <div class="field_box">
+                <input type="text" name="search_txt" id="search_txt" placeholder="Buscar...">
+                <span class="submit_search" id="submit_search" title="Buscar"></span> 
+            </div>
+        </form>
+    </div>
+
+    <span class="toggle_menu"><i class="fas fa-bars"></i></span>
+
+    <!-- ERROR FIXED -->
+    <div class="fixed_err">
+        <span class="close"><i class="fas fa-times"></i></span>
+        <div class="fixed_err_content">
+            <div class="title">Error</div>
+            <div class="txt"></div>
+            <span class="btn" id="ok_err">Aceptar</span>
+        </div>
+    </div>
+
+    <div class="loader"><span class="txt">Cargando...</span></div>
+
+    <!-- JQUERY -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <!-- PLUGIN OWL CAROUSEL -->
+    <script src="assets/js/owl-carousel/owl.carousel.min.js"></script>
+    <!-- PLUGIN FANCYBOX -->
+    <script src="assets/js/fancybox/jquery.fancybox.min.js"></script>
+    <!-- FONTAWESOME -->
+    <script src="https://kit.fontawesome.com/7b0f56c53b.js" crossorigin="anonymous"></script>
+    <!-- JS PROPIO -->
+    <script src="assets/js/js.min.js?v=1.0"></script>
+
+</body>
+
+</html>

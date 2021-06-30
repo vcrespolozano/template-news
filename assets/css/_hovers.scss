@@ -82,4 +82,16 @@
         @include scalar(0);
     }
 
+    .titulo_back .back:hover {
+        background-color: $color_oscuro;
+    }
+    .new_details .new_header .back:hover {
+        color: $color_principal;
+    }
+
+    .paginator .btn_page:hover {
+        background-color: $color_claro;
+        color           : $color_principal;
+    }
+
 }

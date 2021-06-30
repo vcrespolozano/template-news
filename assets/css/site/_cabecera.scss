@@ -4,14 +4,12 @@
 /*** CABECERA ***/
 header {
     @include fixedPos(0, 0, 0, auto);
-    background        : $color_oscuro;
     -webkit-box-shadow: 0px 5px 12px 5px rgba(0,0,0,0.25);
     box-shadow        : 0px 5px 12px 5px rgba(0,0,0,0.25);
     z-index           : 3;
 
     .header_content {
         position: relative;
-        padding : 10px 30px;
         overflow: hidden;
         z-index : 1;
 
@@ -22,12 +20,14 @@ header {
             height    : 230px;
             background: $color_claro;
             @include rotar(-60deg);
-            z-index   : 0;
+            z-index   : 2;
         }
 
         .logo {
             display            : block;
             float              : left;
+            margin             : 10px 0;
+            margin-left        : 30px;
             position           : relative;
             background-image   : url('../img/logo.png');
             background-repeat  : no-repeat;
@@ -35,80 +35,125 @@ header {
             background-size    : contain;
             width              : 153px;
             height             : 70px;
-            z-index            : 1;
+            z-index            : 3;
         }
     
         .info {
-            position    : relative;
-            float       : right;
-            width       : calc(100% - 153px);
-            padding-left: 60px;
-            padding-top : 15px;
-            z-index     : 1;
+            position: relative;
+            float   : right;
+            width   : calc(100% - 183px);
+            z-index : 1;
+
+            .upper {
+                position          : relative;
+                background        : $color_oscuro;
+                padding           : 10px 30px 10px 60px;
+                -webkit-box-shadow: 0px 5px 12px 5px rgba(0,0,0,0.2);
+                box-shadow        : 0px 5px 12px 5px rgba(0,0,0,0.2);
+                z-index           : 2;
+
+                .breadcrumbs {
+                    position           : relative;
+                    float              : left;
+                    padding-left       : 40px;
+                    background         : url('../img/ico_home.png') no-repeat;
+                    background-position: left 5px center;
+                    background-size    : 24px;
+                    color              : $color_claro;
+                    z-index            : 1;
+        
+                    a,
+                    span {
+                        color          : $color_claro;
+                        display        : inline-block;
+                        vertical-align : middle;
+                        margin         : 0 5px;
+                        font-size      : 16px;
+                        line-height    : 30px;
+                        height         : 30px;
+                        text-decoration: none;
+        
+                        &:last-child {
+                            margin-right: 0;
+                        }
+                    }
+                }
+        
+                .right_side {
+                    position: relative;
+                    float   : right;
+                    z-index : 1;
+        
+                    .search_icon {
+                        position       : relative;
+                        display        : inline-block;
+                        vertical-align : middle;
+                        margin-left    : 10px;
+                        background     : url('../img/ico_search.png') center no-repeat;
+                        background-size: contain;
+                        width          : 30px;
+                        height         : 30px;
+                        @include transicion(250ms);
+                        cursor         : pointer;
     
-            .breadcrumbs {
-                position           : relative;
-                float              : left;
-                padding-left       : 50px;
-                background         : url('../img/ico_home.png') no-repeat;
-                background-position: left 5px center;
-                background-size    : 28px;
-                z-index            : 1;
-    
-                a,
-                span {
-                    color          : $color_claro;
-                    display        : inline-block;
-                    vertical-align : middle;
-                    margin-right   : 10px;
-                    font-size      : 16px;
-                    line-height    : 36px;
-                    height         : 36px;
-                    text-decoration: none;
-    
-                    &:last-child {
-                        margin-right: 0;
+                        &.active {
+                            background-image: url('../img/ico_search_r.png');
+                        }
+                    }
+        
+                    .clock_icon {
+                        display            : inline-block;
+                        vertical-align     : middle;
+                        padding-right      : 45px;
+                        text-align         : right;
+                        background         : url('../img/ico_clock.png') no-repeat;
+                        background-position: right 5px center;
+                        background-size    : contain;
+        
+                        span {
+                            display    : block;
+                            color      : $color_claro;
+                            font-size  : 14px;
+                            line-height: 15px;
+                            height     : 15px;
+                        }
                     }
                 }
             }
-    
-            .right_side {
-                position: relative;
-                float   : right;
-                z-index : 1;
-    
-                .search_icon {
-                    position       : relative;
-                    display        : inline-block;
-                    vertical-align : middle;
-                    margin-left    : 10px;
-                    background     : url('../img/ico_search.png') center no-repeat;
-                    background-size: contain;
-                    width          : 36px;
-                    height         : 36px;
-                    @include transicion(250ms);
-                    cursor         : pointer;
 
-                    &.active {
-                        background-image: url('../img/ico_search_r.png');
-                    }
-                }
-    
-                .clock_icon {
-                    display            : inline-block;
-                    vertical-align     : middle;
-                    padding-right      : 55px;
-                    text-align         : right;
-                    background         : url('../img/ico_clock.png') no-repeat;
-                    background-position: right 5px center;
-                    background-size    : contain;
-    
-                    span {
-                        display    : block;
-                        color      : $color_claro;
-                        font-size  : 14px;
-                        line-height: 18px;
-                        height     : 18px;
+            .menu {
+                position     : relative;
+                padding-left : 60px;
+                padding-right: 30px;
+                background   : $color_principal;
+                z-index      : 1;
+
+                ul {
+                    list-style: none;
+                    text-align: right;
+
+                    li {
+                        position      : relative;
+                        display       : inline-block;
+                        vertical-align: middle;
+                        z-index       : 1;
+
+                        a {
+                            position       : relative;
+                            display        : block;
+                            line-height    : 30px;
+                            padding        : 5px 10px;
+                            text-decoration: none;
+                            color          : $color_claro;
+                            text-transform : uppercase;
+                            @include transicion(300ms);
+                            z-index: 1;
+
+                            &.active {
+                                background-color: $color_oscuro;
+                                color           : $gris_claro;
+                            }
+                        }
                     }
                 }
             }

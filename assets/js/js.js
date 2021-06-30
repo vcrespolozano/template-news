@@ -9,9 +9,6 @@ var time  = today.getHours() + ":" + today.getMinutes();
 
 $(document).ready(function(){
 
-    // Top del menú
-    // $('nav.menu').css('top', alto_cabecera+'px');
-
     // Top del buscador
     $('.search').css('top', alto_cabecera+10+'px');
 
@@ -25,13 +22,26 @@ $(document).ready(function(){
     $('#time').html(time);
     $('#date').html(date);
 
+    // LocalStorage para las opciones de cabecera
+    activeOption();
+
+    $('.menu a').click(function(e){
+        e.preventDefault();
+        let cat       = $(this).attr('data-cat');
+        let cat_title = $(this).attr('title');
+
+        catStorage(cat, cat_title);
+
+        location.href = $(this).attr('href');
+    });
+
+    // Botón volver
+    $('#back').click(function(e){
+        goBack();
+    });
+
     // Fijamos el año
     $('#year').html(year);
-
-    // Submit contacto
-    $('#submit').click(function(){
-        validarContacto();
-    });
 
     // Buscar
     $('#search_trigger').click(function(){
@@ -46,8 +56,20 @@ $(document).ready(function(){
         $('.search').removeClass('on');
     });
 
+    $('.search input').keydown(function (e) {
+        let search_txt = $(this).val();
+        if (e.which == 13)
+        {
+            e.preventDefault();
+            if( search_txt.length > 0 )
+                $('#search_form').submit();
+        }
+    });
+
     $('#submit_search').click(function(){
-        $('#search_form').submit();
+
+        if( $('.search input').val() != '' )
+            $('#search_form').submit();
     });
 
     // Pop política
@@ -109,8 +131,13 @@ $(document).ready(function(){
     });
 
     // ALTO DE LOS CONTENIDOS INTERIORES
-    if( $('.text_content').length == 1 || $('.new_content').length == 1 )
-        alto_inner_content();
+    alto_inner_content();
+
+    // PANTALLA DE BÚSQUEDA
+    if( window.location.href.indexOf('search_txt') !== -1 )
+    {
+        getBusqueda();
+    }
 
 });
 
@@ -151,6 +178,14 @@ $(window).on('resize', function(){
     altos_mixtos();
 });
 
+const getBusqueda = () => {
+    let url_exploded   = window.location.href.split('search_txt');
+    let param_exploded = url_exploded[1].split('=');
+    let search_txt     = param_exploded[1];
+
+    $('#searched_txt').html(search_txt);
+}
+
 const altos_mixtos = () => {
 
     // Buscamos los modulos mixtos
@@ -175,12 +210,54 @@ const altos_mixtos = () => {
 
 const alto_inner_content = () => {
     let alto_pie         = $('footer').outerHeight(true);
-    let min_alto_content = alto_pantalla - alto_cabecera - alto_pie;
+    let min_alto_content = alto_pantalla - alto_cabecera - alto_pie - 40;
 
     if( $('.text_content').length == 1 )
         $('.text_content').css('min-height', min_alto_content+'px');
     else if( $('.new_content').length == 1 )
         $('.new_details').css('min-height', min_alto_content+'px');
+    else if( $('.search_content').length == 1 )
+        $('.search_content').css('min-height', min_alto_content+'px');
+}
+
+const goBack = () => {
+
+    localStorage.removeItem('prev_category');
+    localStorage.removeItem('prev_category_title');
+    localStorage.removeItem('category');
+    localStorage.removeItem('category_title');
+    
+    window.location.href = './';
+}
+
+const catStorage = (cat, cat_title) => {
+
+    if( localStorage.getItem('category') !== null )
+    {
+        let prev_cat       = localStorage.getItem('category');
+        let prev_cat_title = localStorage.getItem('category_title');
+        localStorage.setItem('prev_category', prev_cat);
+        localStorage.setItem('prev_category_title', prev_cat_title);
+    }
+
+    // Guardamos en localStorage
+    localStorage.setItem('category', cat);
+    localStorage.setItem('category_title', cat_title);
+}
+
+const activeOption = () => {
+    let stored_cat       = localStorage.getItem('category');
+    let stored_cat_title = localStorage.getItem('category_title');
+
+    $('.menu a').removeClass('active');
+    if( window.location.href.indexOf('category') !== -1 )
+    {
+        if( stored_cat != '' )
+            $('.menu a[data-cat="'+stored_cat+'"]').addClass('active');
+    
+        if( $('#cat_title').length == 1 )
+            $('#cat_title').html(stored_cat_title);
+    }
 }
 
 const fixedError = (title, txt) => {

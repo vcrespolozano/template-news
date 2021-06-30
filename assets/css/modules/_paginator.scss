@@ -1,0 +1,39 @@
+@use '../variables' as *;
+@use '../mixins' as *;
+
+/*** BÚSQUEDA ***/
+.paginator {
+    position  : relative;
+    padding   : 30px 20px;
+    text-align: center;
+    z-index   : 2;
+
+    .pag_info {
+        display       : inline-block;
+        vertical-align: middle;
+        font-size     : 18px;
+        font-weight   : 600;
+        line-height   : 35px;
+        width         : 70px;
+        color         : $color_oscuro;
+        border-radius : 8px;
+        letter-spacing: 3px;
+        text-align    : center;
+    }
+    .btn_page {
+        display        : inline-block;
+        vertical-align : middle;
+        width          : 35px;
+        height         : 35px;
+        line-height    : 33px;
+        text-align     : center;
+        color          : $color_claro;
+        font-size      : 16px;
+        text-decoration: none;
+        background     : $color_principal;
+        margin         : 0 3px;
+        border         : 1px solid $color_principal;
+        border-radius  : 8px;
+        @include transicion(300ms);
+    }
+}
