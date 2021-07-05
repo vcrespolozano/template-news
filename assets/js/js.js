@@ -9,14 +9,15 @@ var time  = today.getHours() + ":" + today.getMinutes();
 
 $(document).ready(function(){
 
+    // Padding TOP del body
+    $('body').css('padding-top', alto_cabecera+'px');
+
     // Top del buscador
-    $('.search').css('top', alto_cabecera+10+'px');
+    let top_search = alto_cabecera + 10;
+    $('.search').css('top', top_search+'px');
 
     // Alto de los MISC
     altos_mixtos();
-
-    // Padding TOP del body
-    $('body').css('padding-top', alto_cabecera+'px');
 
     // Fijamos fecha y hora en cabecera
     $('#time').html(time);
@@ -25,7 +26,7 @@ $(document).ready(function(){
     // LocalStorage para las opciones de cabecera
     activeOption();
 
-    $('.menu a').click(function(e){
+    $('#cats_menu a').click(function(e){
         e.preventDefault();
         let cat       = $(this).attr('data-cat');
         let cat_title = $(this).attr('title');
@@ -108,20 +109,19 @@ $(document).ready(function(){
             $('#newsletter_form').submit();
     });
 
-    // PARA MÓVIL
-    if( ancho_pantalla < 768 )
+    // PARA MÓVIL y TABLET VERTICAL
+    if( ancho_pantalla <= 768 )
     {
-        $('.toggle_menu').click(function(){
-            $('.menu').addClass('on');
-        });
+        // Fijamos el top del menú
+        $('nav.menu').css('top', alto_cabecera+'px');
 
-        $('.cerrar_menu').click(function(){
-            $('.menu').removeClass('on');
+        $('.toggle_menu').click(function(){
+            $('body').toggleClass('menu_on');
         });
     }
     else
     {
-        $('.menu').removeClass('on');
+        $('body').removeClass('menu_on');
     }
 
     // SUBIR AL TOP DE LA PÁGINA DESDE EL PIE
@@ -200,10 +200,6 @@ const altos_mixtos = () => {
 
                 item.children('.fullwidth').find('img').css('height', alto_grid+'px');
             });
-        }
-        else
-        {
-            $('.misc .fullwidth img').css('height', 'auto');
         }
     }
 }

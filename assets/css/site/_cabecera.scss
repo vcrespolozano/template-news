@@ -118,6 +118,20 @@ header {
                             height     : 15px;
                         }
                     }
+
+                    .toggle_menu {
+                        position       : relative;
+                        display        : none;
+                        vertical-align : middle;
+                        width          : 30px;
+                        height         : 30px;
+                        margin-left    : 10px;
+                        background     : url('../img/ico_menu.png') center no-repeat;
+                        background-size: contain;
+                        cursor         : pointer;
+                        @include transicion(200ms);
+                        z-index        : 1;
+                    }
                 }
             }
 
@@ -155,6 +169,13 @@ header {
                             }
                         }
                     }
+                }
+
+                ul.ul_legal {
+                    display    : none;
+                    margin-top : 25px;
+                    padding-top: 15px;
+                    border-top : 1px solid $color_claro;
                 }
             }
         }

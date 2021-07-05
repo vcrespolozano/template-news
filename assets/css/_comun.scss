@@ -144,9 +144,7 @@ strong {
   padding-bottom: 15px;
   line-height   : 45px;
   margin-bottom : 15px;
-  white-space   : nowrap;
-  text-overflow : ellipsis;
-  overflow      : hidden;
+
   z-index       : 1;
 
   &:after {
@@ -177,9 +175,13 @@ strong {
   .txt {
     display       : inline-block;
     vertical-align: middle;
+    width         : calc(100% - 60px);
     font-size     : 24px;
     font-weight   : 600;
     letter-spacing: 1px;
+    white-space   : nowrap;
+    text-overflow : ellipsis;
+    overflow      : hidden;
     color         : $color_oscuro;
 
     .quoted {
@@ -240,7 +242,7 @@ strong {
 /***** CONTENT -> CONTENEDOR PRINCIPAL - ANCHO 100% - ANCHO DE MENÚ ****/
 .content {
   position   : relative;
-  width      : $w_1600;
+  max-width  : $w_1600;
   background : $color_claro;
   margin     : 0 auto;
   padding-top: 40px;
@@ -292,23 +294,6 @@ strong {
     @include transicion(50ms);
     z-index: 1;
   }
-}
-
-/**** BOTÓN TOGGLE MENU ****/
-.toggle_menu {
-  display    : none;
-  @include fixedPos(auto, auto, 4%, 6%);
-  border       : 1px solid $color_claro;
-  width        : 50px;
-  height       : 50px;
-  line-height  : 50px;
-  border-radius: 100%;
-  text-align   : center;
-  font-size    : 22px;
-  background   : $color_principal;
-  color        : $color_claro;
-  opacity      : .8;
-  z-index      : 9;
 }
 
 /**** SCROLLBAR ****/
