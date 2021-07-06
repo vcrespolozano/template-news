@@ -206,7 +206,7 @@ const altos_mixtos = () => {
 
 const alto_inner_content = () => {
     let alto_pie         = $('footer').outerHeight(true);
-    let min_alto_content = alto_pantalla - alto_cabecera - alto_pie - 40;
+    let min_alto_content = alto_pantalla - alto_cabecera - alto_pie;
 
     if( $('.text_content').length == 1 )
         $('.text_content').css('min-height', min_alto_content+'px');
